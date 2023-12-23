@@ -1,0 +1,50 @@
+{% extends 'layouts/base-fullscreen.html' %}
+
+{% block title %} Recuperar Senha {% endblock title %}
+
+<!-- Specific CSS goes HERE -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+
+    <div class="auth-wrapper">
+        <div class="auth-content">
+            <div class="auth-bg">
+                <span class="r"></span>
+                <span class="r s"></span>
+                <span class="r s"></span>
+                <span class="r"></span>
+            </div>
+            <div class="card text-center">
+                <div class="card-header mb-4">
+                    <h2>Esqueceu a Senha?</h2>
+                </div>
+                <div class="card-body text-center">
+                    <p>Digite seu endereço de e-mail abaixo e enviaremos uma mensagem de recuperação.</p>
+                    <form role="form" method="POST">
+                            {% csrf_token %}
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <label class="input-group-text text-center">E-mail</label><br>
+                                    {{ form.email }}
+                                </div>
+                            </div>
+                            <span class="text-error">{{ form.email.errors }}</span>
+                            <button type="submit" class="btn btn-primary shadow-2 mb-4">Recuperar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock content %}
+
+<!-- Specific JS goes HERE --> 
+{% block javascripts %}
+<script>
+    $(function(){
+        i = document.querySelector('input#id_email')
+        i.className = 'form-control'
+    })
+</script>
+{% endblock javascripts %}

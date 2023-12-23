@@ -1,0 +1,52 @@
+{% extends 'layouts/base-fullscreen.html' %}
+
+{% block title %} Crie uma nova senha {% endblock title %}
+
+<!-- Specific CSS goes HERE -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+
+<div class="auth-wrapper">
+    <div class="auth-content">
+        <div class="auth-bg">
+            <span class="r"></span>
+            <span class="r s"></span>
+            <span class="r s"></span>
+            <span class="r"></span>
+        </div>
+        <div class="card text-center">
+            <div class="card-header">
+                <h2>Recuperação de Senha.</h2>
+            </div>
+            <div class="card-body">
+                {% if validlink %}
+                    <h5>Crie uma nova Senha!</h5>
+                    <form method="POST">
+                        {% csrf_token %}
+                        {{ form.as_p }}
+                        <button type="submit" class="btn btn-primary shadow-2 mb-4">
+                            Criar nova Senha
+                        </button>
+                    </form>
+                {% else %}
+                    <p>O link de redefinição de senha era inválido, possivelmente porque já foi usado. Por favor, solicite uma nova redefinição de senha.</p>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}
+
+<!-- Specific JS goes HERE --> 
+{% block javascripts %}
+<script>
+    $(function(){
+        p1 = document.querySelector('input#id_new_password1')
+        p1.className = 'form-control'
+        p2 = document.querySelector('input#id_new_password2')
+        p2.className = 'form-control'
+    })
+</script>
+{% endblock javascripts %}

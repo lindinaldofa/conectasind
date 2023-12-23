@@ -1,0 +1,32 @@
+{% extends "layouts/base-fullscreen.html" %}
+
+{% block title %} Senha Recuperada {% endblock title %}
+
+<!-- Specific CSS goes HERE -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+
+    <div class="auth-wrapper">
+        <div class="auth-content">
+            <div class="auth-bg">
+                <span class="r"></span>
+                <span class="r s"></span>
+                <span class="r s"></span>
+                <span class="r"></span>
+            </div>
+            <div class="card text-center">
+                <div class="card-header">
+                    <h2>Redefinição de senha concluída.</h2>
+                </div>
+                <div class="card-body text-center">
+                    <p>Sua nova senha foi definida. Você pode fazer <a href="{% url 'login' %}">login agora.</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock content %}
+
+<!-- Specific JS goes HERE --> 
+{% block javascripts %}{% endblock javascripts %}

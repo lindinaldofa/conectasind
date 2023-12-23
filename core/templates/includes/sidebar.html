@@ -1,0 +1,85 @@
+<!-- [ navigation menu ] start -->
+<nav class="pcoded-navbar">
+    <div class="navbar-wrapper">
+        <div class="navbar-brand header-logo">
+            <a href="/" class="b-brand">
+                <div class="b-bg" style="background-image: url('#'); background-size: cover;">
+                </div>
+                <span class="b-title">ConectaSind</span>
+            </a>
+            <a class="mobile-menu" id="mobile-collapse" href="javascript:"><span></span></a>
+        </div>
+        <div class="navbar-content scroll-div">
+            <ul class="nav pcoded-inner-navbar">
+                <li data-username="dashboard" 
+                    class="nav-item {% if 'index' in segment %} active {% endif %}">
+                    <a href="/" class="nav-link "><span class="pcoded-micon"><i class="feather icon-home"></i></span><span
+                            class="pcoded-mtext">Painel</span></a>
+                </li>
+                <li class="nav-item pcoded-menu-caption">
+                    <label>Cadastros</label>
+                </li>
+                <li data-username="Usuários" 
+                    class="nav-item {% if 'usuarios' in segment %} active {% endif %}">
+                    <a href="#" class="nav-link">
+                        <span class="pcoded-micon"><i class="feather icon-user"></i></span>
+                            <span class="pcoded-mtext">Usuários</span></a>
+                </li>
+                <li data-username="Professor" 
+                    class="nav-item {% if 'professores' in segment %} active {% endif %}">
+                    <a href="#" class="nav-link">
+                        <span class="pcoded-micon"><i class="feather icon-users"></i></span>
+                            <span class="pcoded-mtext">Professores</span></a>
+                </li>
+                <li data-username="Aluno" 
+                    class="nav-item {% if 'aluno' in segment %} active {% endif %}">
+                    <a href="#" class="nav-link">
+                        <span class="pcoded-micon"><i class="feather icon-users"></i></span>
+                            <span class="pcoded-mtext">Alunos</span></a>
+                </li>
+                <li data-username="Entidade" 
+                    class="nav-item {% if 'entidade' in segment %} active {% endif %}">
+                    <a href="#" class="nav-link">
+                        <span class="pcoded-micon"><i class="feather icon-grid"></i></span>
+                            <span class="pcoded-mtext">Entidades</span></a>
+                </li>
+                <li data-username="Unidade" 
+                    class="nav-item {% if 'unidade' in segment %} active {% endif %}">
+                    <a href="#" class="nav-link">
+                        <span class="pcoded-micon"><i class="feather icon-map-pin"></i></span>
+                            <span class="pcoded-mtext">Unidades</span></a>
+                </li>
+                <li data-username="Turmas" 
+                class="nav-item {% if 'turmas' in segment %} active {% endif %}">
+                <a href="#" class="nav-link">
+                    <span class="pcoded-micon"><i class="feather icon-layers"></i></span>
+                        <span class="pcoded-mtext">Turmas</span></a>
+                </li>
+                <li data-username="Contratos" 
+                class="nav-item {% if 'contratos' in segment %} active {% endif %}">
+                <a href="#" class="nav-link">
+                    <span class="pcoded-micon"><i class="feather icon-file"></i></span>
+                        <span class="pcoded-mtext">Contratos</span></a>
+                </li>
+                <li data-username="Modalidades" 
+                    class="nav-item {% if 'modalidade' in segment %} active {% endif %}">
+                    <a href="#" class="nav-link">
+                        <span class="pcoded-micon"><i class="feather icon-list"></i></span>
+                            <span class="pcoded-mtext">Modalidades</span></a>
+                </li>
+
+                
+                <li class="nav-item pcoded-menu-caption">
+                    <label>Relatórios</label>
+                </li>
+                <li data-username="Relatórios" 
+                    class="nav-item {% if 'relatorios' in segment %} active {% endif %}">
+                    <a href="#" class="nav-link">
+                        <span class="pcoded-micon"><i class="feather icon-file-text"></i></span>
+                            <span class="pcoded-mtext">Relatórios</span></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<!-- [ navigation menu ] end -->
